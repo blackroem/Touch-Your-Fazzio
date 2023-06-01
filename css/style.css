@@ -1,0 +1,49 @@
+h1 ,h2 {
+    font-size: 60px;
+    text-align: center;
+    font-family: arial;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.stage {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.stage::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 60px;
+    background: url(../stage.png) bottom center no-repeat;
+    background-size: 70%;
+    position: absolute;
+    bottom: -1px;
+
+}
+
+.Fazzio {
+    width: 100%;
+    height: 100%;
+    background: url(../Fazzio.png) bottom center no-repeat;
+    background-size: 75%;
+    position: absolute;
+    top: 300px;
+    transition: 0.3s;
+}
+
+.stage.muncul .Fazzio {
+    top: -20px;
+}
